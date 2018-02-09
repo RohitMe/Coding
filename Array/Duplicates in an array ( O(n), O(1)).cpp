@@ -1,11 +1,14 @@
 /*
 PROBLEM: https://practice.geeksforgeeks.org/problems/find-duplicates-in-an-array/1
-Given an array A[], Your task is to complete the function printDuplicates which prints the duplicate elements of the given array. If no duplicate element is found  print -1.
+Given an array A[], Your task is to complete the function printDuplicates which prints the duplicate elements of the given array.
+If no duplicate element is found  print -1.
 
 Note: Auxiliary Space must be O(1) and Time complexity must be O(n).
 
 Input:
-The first line of input contains an integer T denoting the no of test cases. Then T test cases follow. Each test case contains an integer N which denotes number of elements of Array. Second line of each test case contains N space separated integers denoting elements of Array A[].
+The first line of input contains an integer T denoting the no of test cases. Then T test cases follow. Each test case contains an
+integer N which denotes number of elements of Array. Second line of each test case contains N space separated integers denoting 
+elements of Array A[].
 
 Output:
 Print the duplicate elements from the array.
@@ -33,10 +36,9 @@ Output:
 using namespace std;
 
 
-/*
-Keep increasing the value at the index of the repeted value means if 3 is repeated then value at index 3 will be increase by size. 
-therefor, for every occurence of 3 the value will be increased,thus when /size if the value is > 1 then it occures more than 1
-*/
+/* Keep increasing the value at the index of the repeted value means if 3 is repeated then value at index 3 will be increase by 
+size. therefor, for every occurence of 3 the value will be increased,thus when /size if the value is > 1 then it occures more 
+than 1 */
 
 void arrIncrease(int *arr, int n) {
     for(int i = 0; i < n; ++i) {
@@ -60,8 +62,8 @@ it does not occure more than 1 time */
             flag = 0;    
         }
         else{
-/* else will be executed when the number occured more than 1, and first time it was traveresd therefor negate it so than next time
-which is 2nd time we can find out it is negative then print the value and then reduce so that no one will print it*/
+/* else will be executed when the number occured more than 1, and first time it was traveresd therefor negate it so than next 
+time which is 2nd time we can find out it is negative then print the value and then reduce so that no one will print it*/
                 arr[index] = -arr[index];
         }    
     
